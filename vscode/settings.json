@@ -3,17 +3,19 @@
         "*.ipynb": "jupyter.notebook.ipynb"
     },
     "git.enableSmartCommit": true,
+    "git.confirmSync": false,
     "window.restoreWindows": "none",
     "workbench.startupEditor": "newUntitledFile",
     "window.restoreFullscreen": true,
-    "jupyter.alwaysTrustNotebooks": true,
-    "git.confirmSync": false,
+    "diffEditor.wordWrap": "on",
+    "explorer.sortOrder": "type",
     "editor.wordWrap": "on",
-    "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.hlsearch": true,
-    "vim.leader": "<space>",
     "vim.useSystemClipboard": true,
+    "vim.smartRelativeLine": true,
+    "vim.easymotion": true,
+    "vim.leader": "<space>",
     "vim.useCtrlKeys": true,
     "vim.insertModeKeyBindings": [
         {
@@ -59,7 +61,5 @@
     ],
     "jupyter.sendSelectionToInteractiveWindow": true,
     "jupyter.alwaysScrollOnNewCell": true,
-    "jupyter.askForKernelRestart": false,
-    "diffEditor.wordWrap": "on",
-    "explorer.sortOrder": "type"
+    "jupyter.askForKernelRestart": false
 } 
