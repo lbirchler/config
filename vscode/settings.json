@@ -2,20 +2,23 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "window.restoreWindows": "none",
     "workbench.startupEditor": "newUntitledFile",
+
+    "window.restoreWindows": "none",
     "window.restoreFullscreen": true,
+
     "diffEditor.wordWrap": "on",
     "explorer.sortOrder": "type",
     "editor.wordWrap": "on",
+
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+
     "vim.incsearch": true,
     "vim.hlsearch": true,
     "vim.useSystemClipboard": true,
     "vim.smartRelativeLine": true,
     "vim.easymotion": true,
-    "vim.leader": "<space>",
     "vim.useCtrlKeys": true,
     "vim.insertModeKeyBindings": [
         {
@@ -59,6 +62,7 @@
             ]
         },
     ],
+
     "jupyter.sendSelectionToInteractiveWindow": true,
     "jupyter.alwaysScrollOnNewCell": true,
     "jupyter.askForKernelRestart": false
