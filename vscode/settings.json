@@ -26,7 +26,7 @@
             "after": ["<Esc>"]
         }
     ],
-    "vim.normalModeKeyBindings": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<leader>", "e"],
             "commands": ["workbench.action.toggleSidebarVisibility"]
@@ -38,6 +38,14 @@
         {
             "before": ["<S-tab>"],
             "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["<leader>", "s"],
+            "commands": ["workbench.action.splitEditor"]
+        },
+        {
+            "before": ["<leader>", "<tab>"],
+            "commands": ["workbench.action.closeActiveEditor"]
         }
     ],
     "vim.visualModeKeyBindings": [
@@ -65,5 +73,11 @@
 
     "jupyter.sendSelectionToInteractiveWindow": true,
     "jupyter.alwaysScrollOnNewCell": true,
-    "jupyter.askForKernelRestart": false
+    "jupyter.askForKernelRestart": false,
+
+    "workbench.colorCustomizations": {
+    "[Default Dark+]": {
+        "activityBar.background": "#050c02a4"
+    }
+    }
 } 
