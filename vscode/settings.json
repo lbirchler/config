@@ -77,7 +77,8 @@
 
     "workbench.colorCustomizations": {
     "[Default Dark+]": {
-        "activityBar.background": "#050c02a4"
+        "activityBar.background": "#050c02a4",
+        "editorLineNumber.foreground": "#fff01ea8"
     }
     }
 } 
