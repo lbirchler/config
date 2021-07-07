@@ -80,9 +80,31 @@
     "jupyter.askForKernelRestart": false,
 
     "workbench.colorCustomizations": {
-    "[Default Dark+]": {
         "activityBar.background": "#050c02a4",
         "editorLineNumber.foreground": "#fff01ea8"
-    }
-    }
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "variable",
+                "settings": {
+                    "foreground": "#fffdfd",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "string.quoted.single",
+                "settings": {
+                    "foreground": "#6275e2"
+                }
+            },
+            {
+                "scope": "string.quoted.double",
+                "settings": {
+                    "foreground": "#cfbbbb"
+                }
+            },
+        ],
+    },
+    "workbench.colorTheme": "GitHub Dark"
 } 
