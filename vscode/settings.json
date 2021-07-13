@@ -50,6 +50,10 @@
         {
             "before": ["<leader>", "<tab>"],
             "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["<Space>"],
+            "commands": ["editor.toggleFold"]
         }
     ],
     "vim.visualModeKeyBindings": [
@@ -81,7 +85,8 @@
 
     "workbench.colorCustomizations": {
         "activityBar.background": "#050c02a4",
-        "editorLineNumber.foreground": "#fff01ea8"
+        "editorLineNumber.foreground": "#fff01ea8",
+        "editor.lineHighlightBackground": "#ecdf3010"
     },
     "editor.tokenColorCustomizations": {
         "textMateRules": [
@@ -106,5 +111,11 @@
             },
         ],
     },
+    "advancedNewFile.convenienceOptions": [
+    
+        "last",
+        "current",
+        "root"
+    ],
     "workbench.colorTheme": "GitHub Dark"
 } 
