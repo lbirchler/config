@@ -84,7 +84,7 @@
     "jupyter.askForKernelRestart": false,
 
     "workbench.colorCustomizations": {
-        "activityBar.background": "#050c02a4",
+        "activityBar.background": "#252B2E",
         "editorLineNumber.foreground": "#fff01ea8",
         "editor.lineHighlightBackground": "#ecdf3010"
     },
@@ -106,7 +106,7 @@
             {
                 "scope": "string.quoted.double",
                 "settings": {
-                    "foreground": "#cfbbbb"
+                    "foreground": "#99C794"
                 }
             },
         ],
@@ -117,5 +117,5 @@
         "current",
         "root"
     ],
-    "workbench.colorTheme": "GitHub Dark"
+    "workbench.colorTheme": "Gatito Theme"
 } 
