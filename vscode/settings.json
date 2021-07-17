@@ -52,6 +52,10 @@
             "commands": ["workbench.action.closeActiveEditor"]
         },
         {
+            "before": ["<space>", "<space>"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
             "before": ["<Space>"],
             "commands": ["editor.toggleFold"]
         }
@@ -117,5 +121,7 @@
         "current",
         "root"
     ],
-    "workbench.colorTheme": "Gatito Theme"
+    "workbench.colorTheme": "Gatito Theme",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false
 } 
