@@ -7,9 +7,8 @@
     "window.restoreWindows": "none",
     "window.restoreFullscreen": true,
 
-    "diffEditor.wordWrap": "on",
+    "diffEditor.wordWrap": "off",
     "explorer.sortOrder": "type",
-    "editor.wordWrap": "on",
 
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
@@ -94,25 +93,27 @@
     "jupyter.alwaysScrollOnNewCell": true,
     "jupyter.askForKernelRestart": false,
     "python.showStartPage": false,
-
     "advancedNewFile.convenienceOptions": [
     
         "last",
         "current",
         "root"
     ],
-
     "workbench.colorCustomizations": {
         "activityBar.background": "#252B2E",
         "editorLineNumber.foreground": "#fff01ea8",
-        "editor.lineHighlightBackground": "#ecdf3010"
+        "editor.lineHighlightBackground": "#ecdf3010",
+        "statusBar.background": "#252B2E",
+        "notebookScrollbarSlider.activeBackground": "#1e1e1e",
+        "notebookScrollbarSlider.background": "#1e1e1e",
+        "notebookScrollbarSlider.hoverBackground": "#1e1e1e"
     },
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
                 "scope": "variable",
                 "settings": {
-                    "foreground": "#fffdfd",
+                    "foreground": "#fff01ea8",
                     "fontStyle": "bold"
                 }
             },
@@ -130,5 +131,17 @@
             },
         ],
     },
-    "window.zoomLevel": -1,
+    "resmon.show.battery": false,
+    "editor.fontWeight": "bold",
+    "window.zoomLevel": -2,
+    "workbench.activityBar.visible": false,
+    "editor.minimap.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.fontWeight": "bold",
+    "terminal.integrated.tabs.enabled": false,
+    "editor.highlightActiveIndentGuide": false,
+    "editor.renderIndentGuides": false,
+    "workbench.tree.renderIndentGuides": "none"
 } 
