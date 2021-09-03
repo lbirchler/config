@@ -16,7 +16,6 @@ set noerrorbells
 set noswapfile 
 colorscheme peachpuff
 let mapleader = " "
+set clipboard=unnamedplus
+vnoremap <C-c> "+y
 
-" call plug#begin('~/.vim/plugged')
-" Plug 'dense-analysis/ale'
-" call plug#end()
