@@ -1,18 +1,13 @@
 {
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-
     "workbench.startupEditor": "newUntitledFile",
-
     "window.restoreWindows": "none",
     "window.restoreFullscreen": true,
-
     "diffEditor.wordWrap": "off",
     "explorer.sortOrder": "type",
-
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
-
     "vim.incsearch": true,
     "vim.hlsearch": true,
     "vim.useSystemClipboard": true,
@@ -21,48 +16,95 @@
     "vim.useCtrlKeys": true,
     "vim.insertModeKeyBindings": [
         {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["<leader>", "e"],
-            "commands": ["workbench.action.toggleSidebarVisibility"]
-        }, 
-        {
-            "before": ["<leader>", "f"],
-            "commands": ["revealInExplorer"]
-        }, 
-        {
-            "before": ["<tab>"],
-            "commands": ["workbench.action.nextEditor"]
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
         },
         {
-            "before": ["<S-tab>"],
-            "commands": ["workbench.action.previousEditor"]
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "revealInExplorer"
+            ]
         },
         {
-            "before": ["<leader>", "s"],
-            "commands": ["workbench.action.splitEditor"]
+            "before": [
+                "<tab>"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
         },
         {
-            "before": ["<leader>", "<tab>"],
-            "commands": ["workbench.action.closeActiveEditor"]
+            "before": [
+                "<S-tab>"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
         },
         {
-            "before": ["<space>", "<space>"],
-            "commands": ["workbench.action.files.save"]
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.splitEditor"
+            ]
         },
         {
-            "before": ["<space>"],
-            "commands": ["editor.toggleFold"]
+            "before": [
+                "<leader>",
+                "<tab>"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "<space>",
+                "<space>"
+            ],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "editor.toggleFold"
+            ]
         }
     ],
     "vim.visualModeKeyBindings": [
         {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         },
         {
             "before": [
@@ -81,7 +123,6 @@
             ]
         },
     ],
-
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
@@ -94,7 +135,6 @@
     "jupyter.askForKernelRestart": false,
     "python.showStartPage": false,
     "advancedNewFile.convenienceOptions": [
-    
         "last",
         "current",
         "root"
@@ -109,11 +149,12 @@
         "notebookScrollbarSlider.hoverBackground": "#1e1e1e"
     },
     "editor.tokenColorCustomizations": {
+        "comments": "#bcafaf8e",
         "textMateRules": [
             {
                 "scope": "variable",
                 "settings": {
-                    "foreground": "#fff01ea8",
+                    "foreground": "#ffffff",
                     "fontStyle": "bold"
                 }
             },
@@ -127,6 +168,12 @@
                 "scope": "string.quoted.double",
                 "settings": {
                     "foreground": "#99C794"
+                }
+            },
+            {
+                "scope": "entity.name.function",
+                "settings": {
+                    "foreground": "#fff01ea8"
                 }
             },
         ],
@@ -143,5 +190,9 @@
     "terminal.integrated.tabs.enabled": false,
     "editor.highlightActiveIndentGuide": false,
     "editor.renderIndentGuides": false,
-    "workbench.tree.renderIndentGuides": "none"
-} 
+    "workbench.tree.renderIndentGuides": "none",
+    "go.toolsManagement.autoUpdate": true,
+    "cSpell.userWords": [],
+    "editor.fontSize": 15,
+    "terminal.integrated.fontSize": 15
+}
