@@ -1,0 +1,7 @@
+[user]
+	name = lbirchler
+	email = bplyr@tutanota.com
+[push]
+	default = matching
+[url "git@github.com:"]
+	insteadOf = https://github.com/
