@@ -24,6 +24,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'davidhalter/jedi-vim'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 
 call plug#end()
 
@@ -34,7 +36,6 @@ let g:go_auto_type_info = 1
 " instructs deoplete to use omni completion for Go files
 call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
-
 " lightline
 set noshowmode
 set laststatus=2
@@ -42,16 +43,11 @@ let g:lightline = {
             \ 'colorscheme': 'ayu_dark',
             \ }
 
-
 " tab auto-completion
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-" close preview window on leaving the insert mode
+" close preview window on leaving insert mode
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
-" automatic vim plug installation
-"let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-"if empty(glob(data_dir . '/autoload/plug.vim'))
-"    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-"    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-"endif
+" leader r :GoRun
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
