@@ -9,7 +9,7 @@ installGo() {
         if [ $response != "y" ]; then
             return
         else
-        echo [-] === REMOVING CURRENT GO INSTALLATION ===
+            echo [-] === REMOVING CURRENT GO INSTALLATION ===
             sudo rm -rf /usr/local/go
         fi
     fi
@@ -23,32 +23,17 @@ installGo() {
 
 setPaths() {
     if ! grep -Fq "$1" ~/.profile; then
-    echo [-] === ADDED $1 TO ~/.PROFILE ===
+        echo [-] === ADDED $1 TO ~/.profile ===
         echo export $1 >> ~/.profile
     fi
 }
 
-setupVim() {
-    if ! hash pip3 2>/dev/null; then
-    echo [-] === INSTALLING PIP3 ===
-        sudo apt install python3-pip > /dev/null 2>&1
-    fi
-    echo [-] === INSTALLING NEOVIM and PYNVIM PACKAGES ===
-    pip3 install --user --upgrade neovim > /dev/null 2>&1
-    pip3 install --user --upgrade pynvim > /dev/null 2>&1
-}
 
-main() {
-    installGo
+installGo
 
-    setPaths GOROOT=/usr/local/go
-    setPaths GOPATH=$HOME/go
-    setPaths 'PATH=$GOPATH/bin:$GOROOT/bin:$PATH'
-    source ~/.profile
+setPaths GOROOT=/usr/local/go
+setPaths GOPATH=$HOME/go
+setPaths 'PATH=$GOPATH/bin:$GOROOT/bin:$PATH'
+source ~/.profile
 
-    mkdir -p ~/go/{src,bin,pkg}
-
-    setupVim
-}
-
-main
+mkdir -p ~/go/{src,bin,pkg}
