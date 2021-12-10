@@ -4,8 +4,9 @@ export EDITOR='vim'
 set -o vi
 bind '"jk":vi-movement-mode'
 
-alias ssr="eval \`ssh-agent -s\` && ssh-add ~/.ssh/id_rsa"
-alias sse="eval \`ssh-agent -s\` && ssh-add ~/.ssh/id_ed25519"
+alias ls='ls --color'
+alias ssr="eval \`ssh-agent -s\` && ssh-add /home/lbirch/.ssh/id_rsa"
+alias sse="eval \`ssh-agent -s\` && ssh-add /home/lbirch/.ssh/id_ed25519"
 alias pg="ping google.com"
 alias uu="sudo apt update && sudo apt upgrade"
-alias ls='ls --color'
+alias open="xdg-open"
