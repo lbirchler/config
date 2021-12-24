@@ -14,4 +14,3 @@ display/x $r13
 display/x $r14
 display/10gx $rsp
 set disassembly-flavor intel
-start
