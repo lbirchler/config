@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TOOL_CONFIG CONFIG_NAME="NO_LONGER_USED">
-    <SUPPORTED_DATA_TYPE CLASS_NAME="ghidra.program.model.listing.Program" />
     <SUPPORTED_DATA_TYPE CLASS_NAME="ghidra.program.model.listing.DataTypeArchive" />
+    <SUPPORTED_DATA_TYPE CLASS_NAME="ghidra.program.model.listing.Program" />
     <ICON LOCATION="red-dragon.gif" />
     <TOOL TOOL_NAME="CodeBrowser_Default" INSTANCE_NAME="">
         <OPTIONS>
@@ -52,7 +52,7 @@
             <INCLUDE CLASS="ghidra.app.plugin.core.interpreter.InterpreterPanelPlugin" />
         </PACKAGE>
         <PLUGIN_STATE CLASS="functioncalls.plugin.FunctionCallGraphPlugin">
-            <STATE NAME="DISPLAY_SATELLITE" TYPE="boolean" VALUE="true" />
+            <STATE NAME="DISPLAY_SATELLITE" TYPE="boolean" VALUE="false" />
             <STATE NAME="DOCK_SATELLITE" TYPE="boolean" VALUE="true" />
         </PLUGIN_STATE>
         <PLUGIN_STATE CLASS="ghidra.app.plugin.core.bookmark.BookmarkPlugin">
@@ -143,7 +143,6 @@
                     <ROW>
                         <FIELD NAME="+" WIDTH="20" ENABLED="true" />
                         <FIELD NAME="Address" WIDTH="100" ENABLED="true" />
-                        <FIELD NAME="Bytes" WIDTH="80" ENABLED="true" />
                         <FIELD WIDTH="10" ENABLED="true" />
                         <FIELD NAME="Parallel ||" WIDTH="20" ENABLED="true" />
                         <FIELD NAME="Mnemonic" WIDTH="70" ENABLED="true" />
@@ -200,6 +199,8 @@
             </ARRAY>
             <STATE NAME="ConflictResolutionMode" TYPE="string" VALUE="RENAME_AND_ADD" />
             <ARRAY NAME="RecentArchiveNames" TYPE="string">
+                <A VALUE="$GHIDRA_HOME/Features/Base/data/typeinfo/generic/generic_clib.gdt" />
+                <A VALUE="$GHIDRA_HOME/Features/Base/data/typeinfo/generic/generic_clib_64.gdt" />
                 <A VALUE="$GHIDRA_HOME/Features/Base/data/typeinfo/win32/windows_vs12_32.gdt" />
             </ARRAY>
             <STATE NAME="PointerFilterState" TYPE="boolean" VALUE="true" />
@@ -457,8 +458,8 @@
                 <A VALUE="C:\Users\user\AppData\Local\Programs\Git\cmd" />
             </ARRAY>
         </PLUGIN_STATE>
-        <ROOT_NODE X_POS="3840" Y_POS="36" WIDTH="1920" HEIGHT="1025" EX_STATE="0" FOCUSED_OWNER="CodeBrowserPlugin" FOCUSED_NAME="Listing" FOCUSED_TITLE="Listing:  ch4_example.exe">
-            <SPLIT_NODE WIDTH="1916" HEIGHT="927" DIVIDER_LOCATION="757" ORIENTATION="VERTICAL">
+        <ROOT_NODE X_POS="0" Y_POS="18" WIDTH="1920" HEIGHT="1043" EX_STATE="0" FOCUSED_OWNER="FunctionWindowPlugin" FOCUSED_NAME="Functions Window" FOCUSED_TITLE="Functions">
+            <SPLIT_NODE WIDTH="1916" HEIGHT="945" DIVIDER_LOCATION="757" ORIENTATION="VERTICAL">
                 <SPLIT_NODE WIDTH="1621" HEIGHT="816" DIVIDER_LOCATION="148" ORIENTATION="VERTICAL">
                     <COMPONENT_NODE TOP_INFO="0">
                         <COMPONENT_INFO NAME="Entropy" OWNER="EntropyPlugin" TITLE="Entropy" ACTIVE="false" GROUP="Header" INSTANCE_ID="3207819926581772885" />
@@ -466,118 +467,123 @@
                     </COMPONENT_NODE>
                     <SPLIT_NODE WIDTH="1916" HEIGHT="927" DIVIDER_LOCATION="913" ORIENTATION="VERTICAL">
                         <SPLIT_NODE WIDTH="1916" HEIGHT="843" DIVIDER_LOCATION="705" ORIENTATION="VERTICAL">
-                            <SPLIT_NODE WIDTH="1916" HEIGHT="927" DIVIDER_LOCATION="609" ORIENTATION="HORIZONTAL">
-                                <SPLIT_NODE WIDTH="1164" HEIGHT="927" DIVIDER_LOCATION="197" ORIENTATION="HORIZONTAL">
-                                    <SPLIT_NODE WIDTH="229" HEIGHT="927" DIVIDER_LOCATION="635" ORIENTATION="VERTICAL">
-                                        <SPLIT_NODE WIDTH="229" HEIGHT="586" DIVIDER_LOCATION="440" ORIENTATION="VERTICAL">
+                            <SPLIT_NODE WIDTH="1916" HEIGHT="945" DIVIDER_LOCATION="668" ORIENTATION="HORIZONTAL">
+                                <SPLIT_NODE WIDTH="1277" HEIGHT="945" DIVIDER_LOCATION="246" ORIENTATION="HORIZONTAL">
+                                    <SPLIT_NODE WIDTH="313" HEIGHT="945" DIVIDER_LOCATION="635" ORIENTATION="VERTICAL">
+                                        <SPLIT_NODE WIDTH="313" HEIGHT="598" DIVIDER_LOCATION="440" ORIENTATION="VERTICAL">
                                             <COMPONENT_NODE TOP_INFO="0">
-                                                <COMPONENT_INFO NAME="Program Tree" OWNER="ProgramTreePlugin" TITLE="Program Trees" ACTIVE="true" GROUP="Default" INSTANCE_ID="3441568524133417048" />
+                                                <COMPONENT_INFO NAME="Program Tree" OWNER="ProgramTreePlugin" TITLE="Program Trees" ACTIVE="true" GROUP="Default" INSTANCE_ID="3442326314094573344" />
                                             </COMPONENT_NODE>
                                             <COMPONENT_NODE TOP_INFO="0">
-                                                <COMPONENT_INFO NAME="Symbol Tree" OWNER="SymbolTreePlugin" TITLE="Symbol Tree" ACTIVE="true" GROUP="Default" INSTANCE_ID="3441568524133417052" />
+                                                <COMPONENT_INFO NAME="Symbol Tree" OWNER="SymbolTreePlugin" TITLE="Symbol Tree" ACTIVE="true" GROUP="Default" INSTANCE_ID="3442326314094573348" />
                                             </COMPONENT_NODE>
                                         </SPLIT_NODE>
                                         <COMPONENT_NODE TOP_INFO="0">
-                                            <COMPONENT_INFO NAME="DataTypes Provider" OWNER="DataTypeManagerPlugin" TITLE="Data Type Manager" ACTIVE="true" GROUP="Default" INSTANCE_ID="3441568524133417054" />
+                                            <COMPONENT_INFO NAME="DataTypes Provider" OWNER="DataTypeManagerPlugin" TITLE="Data Type Manager" ACTIVE="true" GROUP="Default" INSTANCE_ID="3442326314094573350" />
                                         </COMPONENT_NODE>
                                     </SPLIT_NODE>
                                     <COMPONENT_NODE TOP_INFO="0">
-                                        <COMPONENT_INFO NAME="Listing" OWNER="CodeBrowserPlugin" TITLE="Listing:  ch4_example.exe" ACTIVE="true" GROUP="Core" INSTANCE_ID="3441568524133417039" />
-                                        <COMPONENT_INFO NAME="Function Graph" OWNER="FunctionGraphPlugin" TITLE="Function Graph" ACTIVE="true" GROUP="Function Graph" INSTANCE_ID="3441570011410546757" />
+                                        <COMPONENT_INFO NAME="Listing" OWNER="CodeBrowserPlugin" TITLE="Listing:  pwn3" ACTIVE="true" GROUP="Core" INSTANCE_ID="3442326247627437879" />
+                                        <COMPONENT_INFO NAME="Function Graph" OWNER="FunctionGraphPlugin" TITLE="Function Graph" ACTIVE="true" GROUP="Function Graph" INSTANCE_ID="3442326314688067373" />
                                     </COMPONENT_NODE>
                                 </SPLIT_NODE>
                                 <SPLIT_NODE WIDTH="810" HEIGHT="927" DIVIDER_LOCATION="946" ORIENTATION="VERTICAL">
+                                    <SPLIT_NODE WIDTH="635" HEIGHT="945" DIVIDER_LOCATION="587" ORIENTATION="VERTICAL">
+                                        <COMPONENT_NODE TOP_INFO="0">
+                                            <COMPONENT_INFO NAME="Decompiler" OWNER="DecompilePlugin" TITLE="Decompile: main" ACTIVE="true" GROUP="Default" INSTANCE_ID="3442326247627437882" />
+                                            <COMPONENT_INFO NAME="Bytes" OWNER="ByteViewerPlugin" TITLE="Bytes: pwn3" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326247627437876" />
+                                            <COMPONENT_INFO NAME="Data Window" OWNER="DataWindowPlugin" TITLE="Defined Data" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326314688067372" />
+                                            <COMPONENT_INFO NAME="Defined Strings" OWNER="ViewStringsPlugin" TITLE="Defined Strings" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326314688067368" />
+                                            <COMPONENT_INFO NAME="Equates Table" OWNER="EquateTablePlugin" TITLE="Equates Table" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326247627437884" />
+                                            <COMPONENT_INFO NAME="External Programs" OWNER="ReferencesPlugin" TITLE="External Programs" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326314094573345" />
+                                            <COMPONENT_INFO NAME="Relocation Table" OWNER="RelocationTablePlugin" TITLE="Relocation Table" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326314688067367" />
+                                        </COMPONENT_NODE>
+                                        <COMPONENT_NODE TOP_INFO="0">
+                                            <COMPONENT_INFO NAME="Functions Window" OWNER="FunctionWindowPlugin" TITLE="Functions" ACTIVE="true" GROUP="Default" INSTANCE_ID="3442326314688067364" />
+                                            <COMPONENT_INFO NAME="Function Call Graph" OWNER="FunctionCallGraphPlugin" TITLE="Function Call Graph" ACTIVE="true" GROUP="Function Call Graph" INSTANCE_ID="3442326314094573349" />
+                                        </COMPONENT_NODE>
+                                    </SPLIT_NODE>
                                     <COMPONENT_NODE TOP_INFO="0">
-                                        <COMPONENT_INFO NAME="Decompiler" OWNER="DecompilePlugin" TITLE="Decompile: entry" ACTIVE="true" GROUP="Default" INSTANCE_ID="3441568524133417042" />
-                                        <COMPONENT_INFO NAME="Bytes" OWNER="ByteViewerPlugin" TITLE="Bytes: ch4_example.exe" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441568524133417036" />
-                                        <COMPONENT_INFO NAME="Data Window" OWNER="DataWindowPlugin" TITLE="Defined Data" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441570011410546756" />
-                                        <COMPONENT_INFO NAME="Defined Strings" OWNER="ViewStringsPlugin" TITLE="Defined Strings" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441570011410546752" />
-                                        <COMPONENT_INFO NAME="Equates Table" OWNER="EquateTablePlugin" TITLE="Equates Table" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441568524133417044" />
-                                        <COMPONENT_INFO NAME="External Programs" OWNER="ReferencesPlugin" TITLE="External Programs" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441568524133417049" />
-                                        <COMPONENT_INFO NAME="Functions Window" OWNER="FunctionWindowPlugin" TITLE="Functions" ACTIVE="true" GROUP="Default" INSTANCE_ID="3441570011347632220" />
-                                        <COMPONENT_INFO NAME="Relocation Table" OWNER="RelocationTablePlugin" TITLE="Relocation Table" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441570011347632223" />
-                                    </COMPONENT_NODE>
-                                    <COMPONENT_NODE TOP_INFO="0">
-                                        <COMPONENT_INFO NAME="Console" OWNER="ConsolePlugin" TITLE="Console" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441568524133417040" />
+                                        <COMPONENT_INFO NAME="Console" OWNER="ConsolePlugin" TITLE="Console" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326247627437880" />
                                     </COMPONENT_NODE>
                                 </SPLIT_NODE>
                             </SPLIT_NODE>
                             <SPLIT_NODE WIDTH="1386" HEIGHT="189" DIVIDER_LOCATION="495" ORIENTATION="HORIZONTAL">
                                 <COMPONENT_NODE TOP_INFO="0">
-                                    <COMPONENT_INFO NAME="Data Type Preview" OWNER="DataTypePreviewPlugin" TITLE="Data Type Preview" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441570011347632219" />
+                                    <COMPONENT_INFO NAME="Data Type Preview" OWNER="DataTypePreviewPlugin" TITLE="Data Type Preview" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326314688067363" />
                                 </COMPONENT_NODE>
                                 <COMPONENT_NODE TOP_INFO="0">
-                                    <COMPONENT_INFO NAME="Virtual Disassembler - Current Instruction" OWNER="DisassembledViewPlugin" TITLE="Disassembled View" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441568524133417043" />
+                                    <COMPONENT_INFO NAME="Virtual Disassembler - Current Instruction" OWNER="DisassembledViewPlugin" TITLE="Disassembled View" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326247627437883" />
                                 </COMPONENT_NODE>
                             </SPLIT_NODE>
                         </SPLIT_NODE>
                         <COMPONENT_NODE TOP_INFO="0">
-                            <COMPONENT_INFO NAME="Bookmarks" OWNER="BookmarkPlugin" TITLE="Bookmarks" ACTIVE="false" GROUP="Core.Bookmarks" INSTANCE_ID="3441568524133417035" />
+                            <COMPONENT_INFO NAME="Bookmarks" OWNER="BookmarkPlugin" TITLE="Bookmarks" ACTIVE="false" GROUP="Core.Bookmarks" INSTANCE_ID="3442326247627437875" />
                         </COMPONENT_NODE>
                     </SPLIT_NODE>
                 </SPLIT_NODE>
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Function Call Trees" OWNER="CallTreePlugin" TITLE="Function Call Trees: entry" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441568524133417037" />
+                    <COMPONENT_INFO NAME="Function Call Trees" OWNER="CallTreePlugin" TITLE="Function Call Trees: echo" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326247627437877" />
                 </COMPONENT_NODE>
             </SPLIT_NODE>
             <WINDOW_NODE X_POS="426" Y_POS="178" WIDTH="1033" HEIGHT="689">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Script Manager" OWNER="GhidraScriptMgrPlugin" TITLE="Script Manager" ACTIVE="false" GROUP="Script Group" INSTANCE_ID="3441568524133417050" />
+                    <COMPONENT_INFO NAME="Script Manager" OWNER="GhidraScriptMgrPlugin" TITLE="Script Manager" ACTIVE="false" GROUP="Script Group" INSTANCE_ID="3442326314094573346" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="423" Y_POS="144" WIDTH="927" HEIGHT="370">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Memory Map" OWNER="MemoryMapPlugin" TITLE="Memory Map" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441568524133417047" />
+                    <COMPONENT_INFO NAME="Memory Map" OWNER="MemoryMapPlugin" TITLE="Memory Map" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326247627437887" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="550" Y_POS="206" WIDTH="655" HEIGHT="509">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Register Manager" OWNER="RegisterPlugin" TITLE="Register Manager" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441570011347632221" />
+                    <COMPONENT_INFO NAME="Register Manager" OWNER="RegisterPlugin" TITLE="Register Manager" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326314688067365" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="1920" Y_POS="54" WIDTH="1920" HEIGHT="1007">
                 <SPLIT_NODE WIDTH="1916" HEIGHT="916" DIVIDER_LOCATION="573" ORIENTATION="HORIZONTAL">
                     <COMPONENT_NODE TOP_INFO="0">
-                        <COMPONENT_INFO NAME="Symbol Table" OWNER="SymbolTablePlugin" TITLE="Symbol Table" ACTIVE="false" GROUP="symbolTable" INSTANCE_ID="3441570011410546753" />
+                        <COMPONENT_INFO NAME="Symbol Table" OWNER="SymbolTablePlugin" TITLE="Symbol Table" ACTIVE="false" GROUP="symbolTable" INSTANCE_ID="3442326314688067369" />
                     </COMPONENT_NODE>
                     <COMPONENT_NODE TOP_INFO="0">
-                        <COMPONENT_INFO NAME="Symbol References" OWNER="SymbolTablePlugin" TITLE="Symbol References" ACTIVE="false" GROUP="symbolTable" INSTANCE_ID="3441570011410546754" />
+                        <COMPONENT_INFO NAME="Symbol References" OWNER="SymbolTablePlugin" TITLE="Symbol References" ACTIVE="false" GROUP="symbolTable" INSTANCE_ID="3442326314688067370" />
                     </COMPONENT_NODE>
                 </SPLIT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="-1" Y_POS="-1" WIDTH="0" HEIGHT="0">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Checksum Generator" OWNER="ComputeChecksumsPlugin" TITLE="Checksum Generator" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441568524133417038" />
+                    <COMPONENT_INFO NAME="Checksum Generator" OWNER="ComputeChecksumsPlugin" TITLE="Checksum Generator" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326247627437878" />
+                </COMPONENT_NODE>
+            </WINDOW_NODE>
+            <WINDOW_NODE X_POS="0" Y_POS="36" WIDTH="1920" HEIGHT="1025">
+                <COMPONENT_NODE TOP_INFO="0">
+                    <COMPONENT_INFO NAME="Function Tags" OWNER="FunctionTagPlugin" TITLE="Function Tags" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326247627437886" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="-1" Y_POS="-1" WIDTH="0" HEIGHT="0">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Function Tags" OWNER="FunctionTagPlugin" TITLE="Function Tags" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441568524133417046" />
+                    <COMPONENT_INFO NAME="Comment Window" OWNER="CommentWindowPlugin" TITLE="Comments" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326314688067371" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="-1" Y_POS="-1" WIDTH="0" HEIGHT="0">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Comment Window" OWNER="CommentWindowPlugin" TITLE="Comments" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441570011410546755" />
-                </COMPONENT_NODE>
-            </WINDOW_NODE>
-            <WINDOW_NODE X_POS="-1" Y_POS="-1" WIDTH="0" HEIGHT="0">
-                <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Python" OWNER="InterpreterPanelPlugin" TITLE="Python" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441570011347632222" />
+                    <COMPONENT_INFO NAME="Python" OWNER="InterpreterPanelPlugin" TITLE="Python" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326314688067366" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="0" Y_POS="0" WIDTH="0" HEIGHT="0">
                 <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="BundleManager" OWNER="GhidraScriptMgrPlugin" TITLE="Bundle Manager" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441568524133417051" />
-                </COMPONENT_NODE>
-            </WINDOW_NODE>
-            <WINDOW_NODE X_POS="3840" Y_POS="54" WIDTH="1920" HEIGHT="1007">
-                <COMPONENT_NODE TOP_INFO="0">
-                    <COMPONENT_INFO NAME="Function Call Graph" OWNER="FunctionCallGraphPlugin" TITLE="Function Call Graph" ACTIVE="false" GROUP="Function Call Graph" INSTANCE_ID="3441568524133417053" />
+                    <COMPONENT_INFO NAME="BundleManager" OWNER="GhidraScriptMgrPlugin" TITLE="Bundle Manager" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442326314094573347" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
             <WINDOW_NODE X_POS="3840" Y_POS="54" WIDTH="1920" HEIGHT="1007">
                 <COMPONENT_NODE TOP_INFO="0">
                     <COMPONENT_INFO NAME="Function Graph Satellite" OWNER="FunctionGraphPlugin" TITLE="Function Graph Satellite" ACTIVE="false" GROUP="Default" INSTANCE_ID="3441570686282448963" />
+                </COMPONENT_NODE>
+            </WINDOW_NODE>
+            <WINDOW_NODE X_POS="0" Y_POS="36" WIDTH="1920" HEIGHT="1025">
+                <COMPONENT_NODE TOP_INFO="0">
+                    <COMPONENT_INFO NAME="Function Call Graph Satellite" OWNER="FunctionCallGraphPlugin" TITLE="Function Call Graph Satellite" ACTIVE="false" GROUP="Default" INSTANCE_ID="3442331364669929270" />
                 </COMPONENT_NODE>
             </WINDOW_NODE>
         </ROOT_NODE>
@@ -611,6 +617,17 @@
                     <Table_State>
                         <COLUMN NAME="Name" WIDTH="413" VISIBLE="true" />
                         <COLUMN NAME="Ghidra Program" WIDTH="413" VISIBLE="true" />
+                        <TABLE_SORT_STATE>
+                            <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                        </TABLE_SORT_STATE>
+                    </Table_State>
+                </XML>
+            </PREFERENCE_STATE>
+            <PREFERENCE_STATE NAME="ghidra.app.plugin.core.function.tags.FunctionTagTableModel:Name:Count:">
+                <XML NAME="COLUMN_DATA">
+                    <Table_State>
+                        <COLUMN NAME="ghidra.app.plugin.core.function.tags.FunctionTagTableModel$FunctionTagNameColumn.Name" WIDTH="519" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.app.plugin.core.function.tags.FunctionTagTableModel$FunctionTagCountColumn.Count" WIDTH="49" VISIBLE="true" />
                         <TABLE_SORT_STATE>
                             <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="0" SORT_DIRECTION="ascending" SORT_ORDER="1" />
                         </TABLE_SORT_STATE>
@@ -789,10 +806,10 @@
             <PREFERENCE_STATE NAME="ghidra.app.plugin.core.functionwindow.FunctionTableModel:Name:Location:Function Signature:Function Size:">
                 <XML NAME="COLUMN_DATA">
                     <Table_State>
-                        <COLUMN NAME="ghidra.app.plugin.core.functionwindow.FunctionTableModel$NameTableColumn.Name" WIDTH="286" VISIBLE="true" />
-                        <COLUMN NAME="ghidra.util.table.field.AddressTableColumn.Location" WIDTH="35" VISIBLE="true" />
-                        <COLUMN NAME="ghidra.util.table.field.FunctionSignatureTableColumn.Function Signature" WIDTH="120" VISIBLE="true" />
-                        <COLUMN NAME="ghidra.util.table.field.FunctionBodySizeTableColumn.Function Size" WIDTH="286" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.app.plugin.core.functionwindow.FunctionTableModel$NameTableColumn.Name" WIDTH="151" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.AddressTableColumn.Location" WIDTH="75" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionSignatureTableColumn.Function Signature" WIDTH="324" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionBodySizeTableColumn.Function Size" WIDTH="64" VISIBLE="true" />
                         <COLUMN NAME="ghidra.util.table.field.FunctionTagTableColumn.Tags" WIDTH="500" VISIBLE="false" />
                         <COLUMN NAME="ghidra.util.table.field.IsFunctionInlineTableColumn.Inline" WIDTH="500" VISIBLE="false" />
                         <COLUMN NAME="ghidra.util.table.field.IsFunctionNonReturningTableColumn.Non-returning" WIDTH="500" VISIBLE="false" />
@@ -815,6 +832,40 @@
                         <COLUMN NAME="ghidra.util.table.field.ReferenceCountToAddressTableColumn.Reference Count" WIDTH="500" VISIBLE="false" />
                         <COLUMN NAME="ghidra.util.table.field.FunctionParameterCountTableColumn.Param Count" WIDTH="500" VISIBLE="false" />
                         <COLUMN NAME="ghidra.util.table.field.MemorySectionProgramLocationBasedTableColumn.Mem Block" WIDTH="500" VISIBLE="false" />
+                        <TABLE_SORT_STATE>
+                            <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="1" SORT_DIRECTION="ascending" SORT_ORDER="1" />
+                        </TABLE_SORT_STATE>
+                    </Table_State>
+                </XML>
+            </PREFERENCE_STATE>
+            <PREFERENCE_STATE NAME="ghidra.app.plugin.core.function.tags.FunctionTableModel:Label:Location:Tags:">
+                <XML NAME="COLUMN_DATA">
+                    <Table_State>
+                        <COLUMN NAME="ghidra.util.table.field.LabelTableColumn.Label" WIDTH="154" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.AddressTableColumn.Location" WIDTH="154" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionTagTableColumn.Tags" WIDTH="378" VISIBLE="true" />
+                        <COLUMN NAME="ghidra.util.table.field.PreviewTableColumn.Preview" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.ByteCountProgramLocationBasedTableColumn.Byte Count" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.EOLCommentTableColumn.EOL Comment" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionSignatureTableColumn.Function Signature" WIDTH="200" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.OffcutReferenceCountToAddressTableColumn.Offcut Reference Count" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.IsFunctionNonReturningTableColumn.Non-returning" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.BytesTableColumn.Bytes" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.SourceTypeTableColumn.Symbol Source" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.SymbolTypeTableColumn.Symbol Type" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.IsFunctionInlineTableColumn.Inline" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.IsFunctionVarargsTableColumn.Varargs" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.CodeUnitTableColumn.Code Unit" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionCallingConventionTableColumn.Function Calling Convention" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.MemoryTypeProgramLocationBasedTableColumn.Mem Type" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionNameTableColumn.Function Name" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionPurgeTableColumn.Function Purge" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.NamespaceTableColumn.Namespace" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.ReferenceCountToAddressTableColumn.Reference Count" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.IsFunctionCustomStorageTableColumn.Custom Storage" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionParameterCountTableColumn.Param Count" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.MemorySectionProgramLocationBasedTableColumn.Mem Block" WIDTH="500" VISIBLE="false" />
+                        <COLUMN NAME="ghidra.util.table.field.FunctionBodySizeTableColumn.Function Size" WIDTH="500" VISIBLE="false" />
                         <TABLE_SORT_STATE>
                             <COLUMN_SORT_STATE COLUMN_MODEL_INDEX="1" SORT_DIRECTION="ascending" SORT_ORDER="1" />
                         </TABLE_SORT_STATE>
