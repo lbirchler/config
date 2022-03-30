@@ -1,6 +1,7 @@
 set $mod Mod1
 
-font pango:Ubuntu Mono 12
+#font pango:Ubuntu Mono 8 
+font pango:Monosans Bold 8 
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -164,3 +165,8 @@ floating_modifier $mod
 
 # launch programs
 bindsym $mod+Ctrl+g exec google-chrome
+
+# lockscreen
+# apt install i3lock xautolock
+bindsym $mod+Ctrl+l exec "i3lock -i ~/.config/i3/lockscreen.png -t"
+exec "xautolock -detectsleep -time 3 -locker \"i3lock -i ~/.config/i3/lockscreen.png -t\""
