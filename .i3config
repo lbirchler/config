@@ -168,5 +168,5 @@ bindsym $mod+Ctrl+g exec google-chrome
 
 # lockscreen
 # apt install i3lock xautolock
-bindsym $mod+Ctrl+l exec "i3lock -i ~/.config/i3/lockscreen.png -t"
-exec "xautolock -detectsleep -time 3 -locker \"i3lock -i ~/.config/i3/lockscreen.png -t\""
+bindsym $mod+Ctrl+l exec "i3lock -c 000000 -e -f" 
+exec "xautolock -detectsleep -time 10 -locker \"i3lock -c 000000 -e -f\""
