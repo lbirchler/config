@@ -1,7 +1,3 @@
-# add to: ~/.ipython/profile_default/ipython_config.py
-c.TerminalInteractiveShell.editing_mode = 'vi'
-
-# add to: ~/.ipython/profile_default/startup/keybindings.py
 from IPython import get_ipython
 from prompt_toolkit.enums import DEFAULT_BUFFER
 from prompt_toolkit.filters import HasFocus, ViInsertMode
