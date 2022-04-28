@@ -32,3 +32,11 @@ COPY .vimrc /root
 COPY .bashrc /root
 COPY .inputrc /root
 COPY ipython /usr/local/etc/ipython
+
+# *** Go ***
+COPY go/install.sh . 
+RUN ./install.sh
+
+
+WORKDIR /root
+CMD "/bin/bash"
