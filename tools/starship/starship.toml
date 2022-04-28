@@ -1,0 +1,17 @@
+format = """$username$hostname$directory$character"""
+
+add_newline = false
+
+[directory]
+truncation_length = 1
+format = "[$path](bold green) "
+
+[hostname]
+ssh_only = false
+format = "[$hostname](bold white) "
+disabled = false
+
+[username]
+format = "[$user](bold white) "
+disabled = false
+show_always = true

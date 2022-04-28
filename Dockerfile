@@ -2,6 +2,7 @@ FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+# *** Packages ***
 RUN apt-get update && apt-get install -y \
     automake \
     build-essential \
@@ -27,16 +28,18 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # *** Configs ***
+COPY .bashrc /root
+COPY .gdbinit /root
+COPY .inputrc /root
 COPY .tmux.conf /root
 COPY .vimrc /root
-COPY .bashrc /root
-COPY .inputrc /root
-COPY ipython /usr/local/etc/ipython
+COPY .ipython /usr/local/etc/ipython
 
-# *** Go ***
-COPY go/install.sh . 
-RUN ./install.sh
+# *** Tools ***
+COPY tools /tools 
 
+WORKDIR /tools/starship
+RUN . ./install.sh
 
 WORKDIR /root
 CMD "/bin/bash"
