@@ -14,11 +14,14 @@ RUN apt-get update && apt-get install -y \
     gdb \
     git \
     ipython3 \
+    libffi-dev \
+    libssl-dev \
     libtool \
     ltrace \
     net-tools \
     netcat \
     python3 \
+    python3-dev \
     python3-pip \
     sshfs \
     strace \
@@ -26,6 +29,10 @@ RUN apt-get update && apt-get install -y \
     vim \
     wget \
     && rm -rf /var/lib/apt/lists/*
+
+# *** Python ***
+COPY requirements.txt /root
+RUN pip install -r /root/requirements.txt
 
 # *** Configs ***
 COPY .bashrc /root
