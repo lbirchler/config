@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y \
     ltrace \
     net-tools \
     netcat \
+    openssh-client \
     python3 \
     python3-dev \
     python3-pip \
@@ -41,6 +42,15 @@ COPY .inputrc /root
 COPY .tmux.conf /root
 COPY .vimrc /root
 COPY .ipython /usr/local/etc/ipython
+
+# To work on repo in container
+# 1. Add private key identity to auth agent *ssh-add*
+# 2. Uncomment RUN commands below 
+# 3. Build image *docker build --ssh default .*
+# 4. Run container *docker run --it --project <project> ...*
+ARG project 
+RUN mkdir -p -m 0700 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+RUN --mount=type=ssh git clone git@github.com:lbirchler/$project.git $project
 
 # *** Tools ***
 COPY tools /tools 
