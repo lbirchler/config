@@ -51,26 +51,15 @@ RUN cd /tools/starship \
     && cd /tools/capstone && ./install.sh \
     && cd /tools/pwndbg && ./install.sh 
 
-#WORKDIR /tools/starship
-#RUN . ./install.sh
-#
-#WORKDIR /tools/capstone
-#RUN ./install.sh
-#
-#WORKDIR /tools/pwndbg
-#RUN ./install.sh
-
 # *** Entry ***
 # default 
 WORKDIR /root
+CMD "/bin/bash"
 
 # repo 
-# 1. Add private key identity to auth agent *ssh-add*
-# 2. Uncomment RUN commands below 
-# 3. Build image *docker build --build-arg PROJECT=<repo name> --ssh default .*
-ARG PROJECT 
-RUN mkdir -p -m 0700 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
-RUN --mount=type=ssh git clone git@github.com:lbirchler/$PROJECT.git /$PROJECT
-WORKDIR /$PROJECT
-
-CMD "/bin/bash"
+# - add private key identity to auth agent *ssh-add*
+# - build image *docker build --build-arg PROJECT=<repo name> --ssh default .*
+# ARG PROJECT 
+# RUN mkdir -p -m 0700 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+# RUN --mount=type=ssh git clone git@github.com:lbirchler/$PROJECT.git /$PROJECT
+# WORKDIR /$PROJECT
