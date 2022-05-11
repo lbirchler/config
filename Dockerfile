@@ -19,11 +19,11 @@ RUN apt-get update && apt-get install -y \
     libtool \
     ltrace \
     net-tools \
-    netcat \
-    openssh-client \
     python3 \
     python3-dev \
     python3-pip \
+    sagemath \
+    sagemath-doc-en \
     sshfs \
     strace \
     tmux \
@@ -44,22 +44,13 @@ COPY .vimrc /root
 COPY .ipython /usr/local/etc/ipython
 
 # *** Tools ***
-COPY tools /tools 
+COPY tools /opt
 
-RUN cd /tools/starship \
+RUN cd /opt/starship \
     && . ./install.sh \
-    && cd /tools/capstone && ./install.sh \
-    && cd /tools/pwndbg && ./install.sh 
+    && cd /opt/capstone && ./install.sh \
+    && cd /opt/pwndbg && ./install.sh 
 
 # *** Entry ***
-# default 
 WORKDIR /root
 CMD "/bin/bash"
-
-# repo 
-# - add private key identity to auth agent *ssh-add*
-# - build image *docker build --build-arg PROJECT=<repo name> --ssh default .*
-# ARG PROJECT 
-# RUN mkdir -p -m 0700 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
-# RUN --mount=type=ssh git clone git@github.com:lbirchler/$PROJECT.git /$PROJECT
-# WORKDIR /$PROJECT
