@@ -9,6 +9,7 @@ class Prompt(Prompts):
         return [(Token.Prompt, ''), ]
 
 c.TerminalInteractiveShell.prompts_class = Prompt
+c.TerminalInteractiveShell.highlighting_style = 'material' 
 c.TerminalInteractiveShell.confirm_exit = False
 c.TerminalIPythonApp.display_banner = False
 c.TerminalInteractiveShell.editing_mode = 'vi'
