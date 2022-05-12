@@ -23,6 +23,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec tilix 
 
 # kill focused window
 bindsym $mod+q kill
@@ -115,24 +116,24 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+    bindsym h resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym j resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
+# same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
+# back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -146,15 +147,6 @@ bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
 bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
 bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
-
-# move workspaces to another monitor
-bindsym $mod+Shift+Right move workspace to output right
-bindsym $mod+Shift+Left move workspace to output left
 
 # adjust brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
@@ -166,7 +158,38 @@ floating_modifier $mod
 # launch programs
 bindsym $mod+Ctrl+g exec google-chrome
 
-# lockscreen
-# apt install i3lock xautolock
+
+# THEME
+# class                 border  bground text    indicator child_border
+client.focused          #000000 #000000 #F8F8F2 #000000   #000000
+client.focused_inactive #000000 #000000 #BFBFBF #000000   #000000
+client.unfocused        #000000 #000000 #BFBFBF #000000   #000000
+client.urgent           #000000 #000000 #F8F8F2 #000000   #000000
+client.placeholder      #000000 #000000 #F8F8F2 #000000   #000000
+
+client.background       #F8F8F2
+
+bar {
+    status_command i3status
+        colors {
+            background #000000
+                statusline #F8F8F2
+                separator  #44475A
+
+                focused_workspace  #44475A #44475A #F8F8F2
+                active_workspace   #282A36 #44475A #F8F8F2
+                inactive_workspace #282A36 #282A36 #BFBFBF
+                urgent_workspace   #FF5555 #FF5555 #F8F8F2
+                binding_mode       #FF5555 #FF5555 #F8F8F2
+        }
+}
+
+# LOCKSCREEN (apt install i3lock xautolock)
 bindsym $mod+Ctrl+l exec "i3lock -c 000000 -e -f" 
-exec "xautolock -detectsleep -time 10 -locker \"i3lock -c 000000 -e -f\""
+exec_always "xset s off; xset -dpms"
+#exec_always feh --bg-scale ~/.config/i3/background.jpg
+
+# MONITORS
+workspace 1 output HDMI-A-0
+workspace 2 output HDMI-A-1
+workspace 3 output DisplayPort-1 
