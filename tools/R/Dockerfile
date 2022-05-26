@@ -1,4 +1,4 @@
-FROM rocker/rstudio
+FROM rocker/rstudio:4.2.0
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -18,5 +18,8 @@ COPY .inputrc /home/rstudio
 COPY .tmux.conf /home/rstudio
 COPY .vimrc /home/rstudio
 
+COPY rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json
+RUN chown -R rstudio:rstudio /home/rstudio/.config
+
 # *** Entry ***
-WORKDIR /root
+WORKDIR /home/rstudio
