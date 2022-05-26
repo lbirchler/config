@@ -53,4 +53,3 @@ RUN cd /opt/starship \
 
 # *** Entry ***
 WORKDIR /root
-CMD "/bin/bash"
