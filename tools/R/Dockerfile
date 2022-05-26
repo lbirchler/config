@@ -24,9 +24,9 @@ RUN chown -R rstudio:rstudio /home/rstudio/.config
 # *** R Packages ***
 RUN install2.r --error --skipinstalled --ncpus -1 \
     Rcpp \
-    parallel
+    parallel \
     rmarkdown \
-    tidyverse \
+    tidyverse
 
 # *** Entry ***
 WORKDIR /home/rstudio
