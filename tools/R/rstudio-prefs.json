@@ -2,12 +2,16 @@
     "save_workspace": "never",
     "always_save_history": false,
     "reuse_sessions_for_project_links": true,
-    "initial_working_directory": "~",
+    "initial_working_directory": "~/work",
     "editor_keybindings": "vim",
     "global_theme": "alternate",
-    "font_size_points": 12,
-    "editor_theme": "Pastel On Dark",
+    "font_size_points": 14,
+    "editor_theme": "lbirchler",
     "server_editor_font_enabled": true,
     "server_editor_font": "DejaVu Sans Mono",
-    "posix_terminal_shell": "bash"
+    "posix_terminal_shell": "bash",
+    "jobs_tab_visibility": "shown",
+    "load_workspace": false,
+    "show_indent_guides": true,
+    "highlight_r_function_calls": true
 }

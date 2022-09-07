@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
     git \
     libxml2-dev \
     tmux \
+    tdsodbc \
+    unixodbc \
+    unixodbc-dev \
     vim \
     wget \
     && rm -rf /var/lib/apt/lists/*
@@ -18,6 +21,8 @@ COPY .inputrc /home/rstudio
 COPY .tmux.conf /home/rstudio
 COPY .vimrc /home/rstudio
 
+RUN mkdir -p /home/rstudio/.config/rstudio/themes
+COPY theme.rstheme /home/rstudio/.config/rstudio/themes/theme.rstheme
 COPY rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json
 RUN chown -R rstudio:rstudio /home/rstudio/.config
 
@@ -26,7 +31,9 @@ RUN install2.r --error --skipinstalled --ncpus -1 \
     Rcpp \
     parallel \
     rmarkdown \
-    tidyverse
+    tidyverse \
+    odbc \
+    DBI
 
 # *** Entry ***
-WORKDIR /home/rstudio
+WORKDIR /home/rstudio/work
