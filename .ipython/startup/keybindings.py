@@ -7,5 +7,6 @@ def switch_to_navigation_mode(event):
     event.cli.vi_state.input_mode = InputMode.NAVIGATION
 
 get_ipython().pt_app.key_bindings.add_binding(
-    u"j", u"k", filter=(HasFocus(DEFAULT_BUFFER) & ViInsertMode())
-)(switch_to_navigation_mode)
+        u"j", u"k", 
+        filter=(HasFocus(DEFAULT_BUFFER) & ViInsertMode()
+    ))(switch_to_navigation_mode)
