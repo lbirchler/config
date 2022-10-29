@@ -19,4 +19,6 @@ COPY .ipython /usr/local/etc/ipython
 RUN conda init bash \
     && conda install ipython -y --quiet
 
-WORKDIR /root
+RUN mkdir /root/work
+
+WORKDIR /root/
