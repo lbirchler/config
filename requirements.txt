@@ -1,4 +1,3 @@
+ipython
 pwntools
 pycryptodome
-z3-solver
-black

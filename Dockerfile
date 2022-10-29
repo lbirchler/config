@@ -13,7 +13,6 @@ RUN apt-get update && apt-get install -y \
     gcc \
     gdb \
     git \
-    ipython3 \
     libffi-dev \
     libssl-dev \
     libtool \
@@ -22,9 +21,6 @@ RUN apt-get update && apt-get install -y \
     python3 \
     python3-dev \
     python3-pip \
-    sagemath \
-    sagemath-doc-en \
-    sshfs \
     strace \
     tmux \
     vim \
