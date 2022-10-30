@@ -17,7 +17,11 @@ COPY .vimrc /root
 COPY .ipython /usr/local/etc/ipython
 
 RUN conda init bash \
-    && conda install ipython -y --quiet
+    && conda install \
+    ipython \
+    requests \
+    conda-build \
+    -y --quiet
 
 RUN mkdir /root/work
 
