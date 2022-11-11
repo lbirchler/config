@@ -7,3 +7,4 @@ set expandtab
 set smarttab
 set noswapfile
 syntax enable
+set bg=dark
