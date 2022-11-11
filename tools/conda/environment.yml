@@ -1,0 +1,24 @@
+name: dev
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - ipykernel
+  - jupyter-lsp-python 
+  - jupyterlab
+  - jupyterlab-drawio
+  - jupyterlab-git
+  - jupyterlab-lsp
+  - jupyterlab-unfold
+  - python=3.7
+  - pip
+  - pip:
+    - black
+    - flake8
+    - ipython 
+    - pylint
+    - pytest
+    
+# drawio: https://drawio-app.com/entity-relationship-diagrams-with-draw-io/
+# ipykernel: python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
+# lsp: add `c.Completer.use_jedi = False` to ipython_config.py

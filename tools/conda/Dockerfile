@@ -16,13 +16,13 @@ COPY .tmux.conf /root
 COPY .vimrc /root
 COPY .ipython /usr/local/etc/ipython
 
+# *** Conda ***
+COPY environment.yml /root
+
 RUN conda init bash \
-    && conda install \
-    ipython \
-    requests \
-    conda-build \
-    -y --quiet
+    && conda update -n base -c defaults conda \
+    && conda env create -f /root/environment.yml --force
+    
+RUN echo 'alias jlab="conda activate dev; jupyter lab --ip=0.0.0.0 --no-browser --allow-root"' >> ~/.bashrc
 
-RUN mkdir /root/work
-
-WORKDIR /root/
+WORKDIR /root/work
