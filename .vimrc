@@ -8,3 +8,4 @@ set smarttab
 set noswapfile
 syntax enable
 set bg=dark
+autocmd FileType c,cpp setlocal equalprg=clang-format
