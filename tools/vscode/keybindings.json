@@ -1,7 +1,16 @@
-// Place your key bindings in this file to override the defaults
 [
     {
-        "key": "ctrl+n",
-        "command": "extension.advancedNewFile"
+        "key": "ctrl+b l",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+b l",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+b p",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
     }
 ]
