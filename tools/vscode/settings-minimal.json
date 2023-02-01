@@ -1,4 +1,5 @@
 {
+    "workbench.colorTheme": "Default Dark+",
     "workbench.startupEditor": "none",
     "telemetry.telemetryLevel": "off",
     "explorer.confirmDelete": false,
