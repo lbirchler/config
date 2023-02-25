@@ -1,11 +1,14 @@
 imap jk <esc>
+syntax on 
 set number
-set ai
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set smarttab
+set ruler
+set autoindent
+set tabstop=4 
+set shiftwidth=4 
+set expandtab 
 set noswapfile
-syntax enable
-set bg=dark
-autocmd FileType c,cpp setlocal equalprg=clang-format
+set pastetoggle=<leader>p
+inoremap {{ {<enter><enter>}<up><tab>
+set background=dark
+colorscheme slate
+
