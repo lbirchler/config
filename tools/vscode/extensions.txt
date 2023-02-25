@@ -1,0 +1,6 @@
+vscodevim.vim
+ms-python.python
+streetsidesoftware.code-spell-checker
+jeff-hykin.better-cpp-syntax
+ms-vscode.cpptools-themes
+GrapeCity.gc-excelviewer
