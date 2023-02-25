@@ -1,127 +1,19 @@
 {
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.startupEditor": "none",
+    "telemetry.telemetryLevel": "off",
+    "window.openFilesInNewWindow": "default",
     "window.restoreWindows": "none",
-    "window.restoreFullscreen": true,
-    "diffEditor.wordWrap": "off",
-    "explorer.sortOrder": "type",
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "vim.incsearch": true,
     "vim.hlsearch": true,
     "vim.useSystemClipboard": true,
-    "vim.smartRelativeLine": true,
-    "vim.easymotion": true,
     "vim.useCtrlKeys": true,
     "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "e"
-            ],
-            "commands": [
-                "workbench.action.toggleSidebarVisibility"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "f"
-            ],
-            "commands": [
-                "revealInExplorer"
-            ]
-        },
-        {
-            "before": [
-                "<tab>"
-            ],
-            "commands": [
-                "workbench.action.nextEditor"
-            ]
-        },
-        {
-            "before": [
-                "<S-tab>"
-            ],
-            "commands": [
-                "workbench.action.previousEditor"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "s"
-            ],
-            "commands": [
-                "workbench.action.splitEditor"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "<tab>"
-            ],
-            "commands": [
-                "workbench.action.closeActiveEditor"
-            ]
-        },
-        {
-            "before": [
-                "<space>",
-                "<space>"
-            ],
-            "commands": [
-                "workbench.action.files.save"
-            ]
-        },
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "editor.toggleFold"
-            ]
-        }
+        {"before": ["j","k"], "after": ["<Esc>"]}
     ],
     "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        },
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
+        {"before": ["j","k"], "after": ["<Esc>"]},
+        {"before": [">"], "commands": ["editor.action.indentLines"]},
+        {"before": ["<"], "commands": ["editor.action.outdentLines"]}
     ],
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
@@ -131,68 +23,16 @@
         "jupyter-notebook": "left"
     },
     "jupyter.sendSelectionToInteractiveWindow": true,
-    "jupyter.alwaysScrollOnNewCell": true,
     "jupyter.askForKernelRestart": false,
-    "python.showStartPage": false,
-    "advancedNewFile.convenienceOptions": [
-        "last",
-        "current",
-        "root"
-    ],
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#252B2E",
-        "editorLineNumber.foreground": "#fff01ea8",
-        "editor.lineHighlightBackground": "#ecdf3010",
-        "statusBar.background": "#252B2E",
-        "notebookScrollbarSlider.activeBackground": "#1e1e1e",
-        "notebookScrollbarSlider.background": "#1e1e1e",
-        "notebookScrollbarSlider.hoverBackground": "#1e1e1e"
-    },
-    "editor.tokenColorCustomizations": {
-        "comments": "#bcafaf8e",
-        "textMateRules": [
-            {
-                "scope": "variable",
-                "settings": {
-                    "foreground": "#ffffff",
-                    "fontStyle": "bold"
-                }
-            },
-            {
-                "scope": "string.quoted.single",
-                "settings": {
-                    "foreground": "#6275e2"
-                }
-            },
-            {
-                "scope": "string.quoted.double",
-                "settings": {
-                    "foreground": "#99C794"
-                }
-            },
-            {
-                "scope": "entity.name.function",
-                "settings": {
-                    "foreground": "#fff01ea8"
-                }
-            },
-        ],
-    },
-    "resmon.show.battery": false,
-    "editor.fontWeight": "bold",
-    "window.zoomLevel": -2,
-    "workbench.activityBar.visible": false,
-    "editor.minimap.enabled": false,
-    "window.menuBarVisibility": "toggle",
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.copyOnSelection": true,
-    "terminal.integrated.fontWeight": "bold",
-    "terminal.integrated.tabs.enabled": false,
-    "editor.highlightActiveIndentGuide": false,
-    "editor.renderIndentGuides": false,
-    "workbench.tree.renderIndentGuides": "none",
-    "go.toolsManagement.autoUpdate": true,
-    "cSpell.userWords": [],
-    "editor.fontSize": 15,
-    "terminal.integrated.fontSize": 15
+    "jupyter.interactiveWindowMode": "single",
+    "notebook.lineNumbers": "on",
+    "breadcrumbs.enabled": false,
+    "notebook.cellFocusIndicator": "border",
+    "notebook.output.textLineLimit": 100,
+    "git.enableSmartCommit": true,
+    "window.zoomLevel": -1,
+    "editor.largeFileOptimizations": false,
+    "workbench.localHistory.enabled": false,
+    "explorer.confirmDelete": false,
+    "extensions.ignoreRecommendations": true
 }
