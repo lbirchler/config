@@ -19,10 +19,10 @@ repos:
     rev: v2.0.1	
     hooks:	
     -   id: autopep8	
-        args: [--in-place, --indent-size=2, --aggressive]
+        args: [--in-place, --indent-size=2, --aggressive, --ignore=E701, --max-line-length=120]
 -   repo: https://github.com/PyCQA/flake8	
     rev: 6.0.0	
     hooks:	
     -   id: flake8	
-        args: ["--ignore=E501,E111,E114"]
+        args: ["--ignore=E501,E111,E114,E701,E704"]
 
