@@ -35,5 +35,6 @@
     "editor.largeFileOptimizations": false,
     "workbench.localHistory.enabled": false,
     "explorer.confirmDelete": false,
-    "extensions.ignoreRecommendations": true
+    "extensions.ignoreRecommendations": true,
+    "editor.minimap.enabled": false
 }
