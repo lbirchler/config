@@ -36,5 +36,8 @@
     "workbench.localHistory.enabled": false,
     "explorer.confirmDelete": false,
     "extensions.ignoreRecommendations": true,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "editor.inlayHints.enabled": "off",
+    "[python]": { "editor.tabSize": 2 },
+    "[c]": { "editor.tabSize": 4 }
 }
