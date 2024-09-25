@@ -28,7 +28,5 @@ alias ssk="pkill -u $(id -u) ssh-agent; rm -f '$ssh_env'"
 
 if [[ -f "$ssh_env" && $(pgrep -u $(id -u) ssh-agent) ]]; then
     export $(< "$ssh_env")
-else
-    ssa
 fi
 
