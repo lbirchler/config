@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "Default Dark+",
     "workbench.startupEditor": "none",
     "telemetry.telemetryLevel": "off",
     "window.openFilesInNewWindow": "default",
@@ -15,20 +14,7 @@
         {"before": [">"], "commands": ["editor.action.indentLines"]},
         {"before": ["<"], "commands": ["editor.action.outdentLines"]}
     ],
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "jupyter.sendSelectionToInteractiveWindow": true,
-    "jupyter.askForKernelRestart": false,
-    "jupyter.interactiveWindowMode": "single",
-    "notebook.lineNumbers": "on",
     "breadcrumbs.enabled": false,
-    "notebook.cellFocusIndicator": "border",
-    "notebook.output.textLineLimit": 100,
     "git.enableSmartCommit": true,
     "window.zoomLevel": -2,
     "editor.fontSize": 16,
