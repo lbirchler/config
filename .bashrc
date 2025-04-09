@@ -10,7 +10,7 @@ alias pg="ping google.com"
 alias uu="sudo apt update && sudo apt upgrade"
 
 alias tl="tmux ls"
-alias ta="tmux a"
+alias ta="tmux a || tmux"
 alias tk="tmux kill-session"
 
 ssh_env="$HOME/.ssh/ssh_env"
